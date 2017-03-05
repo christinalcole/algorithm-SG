@@ -17,7 +17,7 @@
 # 7. Return the value of q, so that the last pivot position is known within the subarry.
 require 'pry'
 
-def quicksort1(array)
+def partition_array(array)
   pivot=array.last #returns value of last position of array
 
   p = q = j= array.index(array.first) #sets tracking indices p, q, j to be the first index of the array
