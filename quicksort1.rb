@@ -41,4 +41,21 @@ def partition_array(array)
   return q
 end
 
-quicksort1([4, 10, 1, 18, 2])
+
+def inplace_quicksort(array, left, right)
+  if left < right
+    #binding.pry
+    pivot_index = partition_array(array)
+    #binding.pry
+    inplace_quicksort(array, left, pivot_index-1)
+    inplace_quicksort(array, pivot_index+1, right)
+  end
+
+  return array
+end
+
+arr = [4, 10, 1, 18, 2]
+inplace_quicksort(arr, 0, arr.length-1)
+print arr
+puts
+#quicksort1([4, 10, 1, 18, 2])
