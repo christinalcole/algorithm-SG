@@ -33,10 +33,10 @@ def partition_array(array)
       q += 1
       j += 1
     end
-    binding.pry
+    #binding.pry
   end
 
-  binding.pry
+  #binding.pry
 
   return q
 end
