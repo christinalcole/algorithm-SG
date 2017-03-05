@@ -20,7 +20,7 @@ require 'pry'
 def quicksort1(array)
   pivot=array.last #returns value of last position of array
 
-  p = q = j= array.index(array.first) #sets tracking indices p, i, j to be the first index of the array
+  p = q = j= array.index(array.first) #sets tracking indices p, q, j to be the first index of the array
   r = array.index(array.last) #sets tracking index r to last index of array
 
   array.each do |a|
