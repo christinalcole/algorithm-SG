@@ -17,6 +17,18 @@
 # 7. Return the value of q, so that the last pivot position is known within the subarry.
 require 'pry'
 
+def inplace_quicksort(array, left, right)
+  if left < right
+    # binding.pry
+    pivot_index = partition_array(array)
+    # binding.pry
+    inplace_quicksort(array, left, pivot_index-1)
+    inplace_quicksort(array, pivot_index+1, right)
+  end
+
+  return array
+end
+
 def partition_array(array)
   pivot=array.last #returns value of last position of array
 
@@ -33,26 +45,16 @@ def partition_array(array)
       q += 1
       j += 1
     end
-    #binding.pry
+    # binding.pry
   end
 
-  #binding.pry
+  # binding.pry
 
   return q
 end
 
 
-def inplace_quicksort(array, left, right)
-  if left < right
-    #binding.pry
-    pivot_index = partition_array(array)
-    #binding.pry
-    inplace_quicksort(array, left, pivot_index-1)
-    inplace_quicksort(array, pivot_index+1, right)
-  end
 
-  return array
-end
 
 #Comment out next 3 lines, prior to benchmark testing, for improved readability in results
 arr = [4, 10, 1, 18, 2]
