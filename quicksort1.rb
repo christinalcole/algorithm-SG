@@ -54,8 +54,8 @@ def inplace_quicksort(array, left, right)
   return array
 end
 
+#Comment out next 3 lines, prior to benchmark testing, for improved readability in results
 arr = [4, 10, 1, 18, 2]
 inplace_quicksort(arr, 0, arr.length-1)
 print arr
 puts
-#quicksort1([4, 10, 1, 18, 2])

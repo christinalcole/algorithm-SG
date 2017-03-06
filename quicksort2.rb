@@ -18,6 +18,7 @@ end
 
 #source: rails.devcamp.com/ruby-programming/ruby-algorithms/how-to-implement-the-quick-sort-algorithm-in-ruby (accessed 03.04.17)
 
+#Comment out next 3 lines, prior to benchmark testing, for improved readability in results
 arr = [4, 10, 1, 18, 2]
 arr2 = arr.quicksort
 print arr2
