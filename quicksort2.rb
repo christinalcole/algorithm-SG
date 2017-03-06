@@ -22,4 +22,4 @@ end
 arr = [4, 10, 1, 18, 2]
 arr2 = arr.quicksort
 print arr2
-# puts
+puts
