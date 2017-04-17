@@ -13,10 +13,10 @@ def mergesort(array)
   if array.length < 2 # If the array only has 0 or 1 element, there's nothing to sort
     array
   else
-    q = ((array.length)/2).floor - 1 # Floor rounds down to closest integer.  Subtracing 1 here, because array indexing starts at 0
+    q = ((array.length)/2).floor # Floor rounds down to closest integer.
     # binding.pry
-    left_half = mergesort(array[0..q])  
-    right_half = mergesort(array[(q+1)..(array.length)])
+    left_half = mergesort(array[0..(q-1)]) # Subtracing 1 here, because array indexing starts at 0
+    right_half = mergesort(array[q..(array.length)])
 
     merge(left_half, right_half)
   end
