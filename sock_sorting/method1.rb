@@ -19,7 +19,7 @@ def sock_sort(socks, final_sort = [])
   if socks.length > 0
     socks.each_with_index do |sock, index|
       first_sock = socks.first
-      if sock = first_sock
+      if sock == first_sock
         paired_socks << [sock, first_sock]
         socks.delete(sock)
       end
@@ -101,6 +101,7 @@ end
 sort_through_pairs(socks)
 
 #idea5 (igoreskin) => returns hash where key, value represents a pair of socks
+{11 => 11, 21=>21, ...}
 def sorting_socks(socks)
   sorted = Hash.new
   i = 0
